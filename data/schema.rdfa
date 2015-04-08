@@ -37,12 +37,281 @@
       <span class="h" property="rdfs:label">Thing</span>
       <span property="rdfs:comment">The most generic type of item.</span>
     </div>
+    
+    
 
-    <div typeof="rdfs:Class" resource="http://schema.org/CreativeWork">
+       
+    <div typeof="rdfs:Class" resource="http://schema.org/Resource">
+      <span class="h" property="rdfs:label">mktg:Resource</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a></span>
+    </div>
+       
+    <div typeof="rdfs:Class" resource="http://schema.org/Assets">
+      <span class="h" property="rdfs:label">Assets</span>
+      <span property="rdfs:comment">Assets are a specific type of content that is characterized by the high importance of one specific binary representation. Other than normal Content that will frequently be rendered differently, based on the <a href="http://schema.org/Channel">Channel</a>, Assets have a canonical representation, which is a binary file. Other than that, Assets can have meta data, different renditions and even sub-assets in case of composite assets. There are many examples and synonyms for assets for instance: File, Document, Image, Video, Audio Clip, Presentation, Image Template, Video Template</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Resource">Resource</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Asset">
+      <span class="h" property="rdfs:label">Asset</span>
+      <span property="rdfs:comment"></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Assets">Assets</a></span>
+    </div>  
+    <div typeof="rdfs:Class" resource="http://schema.org/AssetRendition">
+      <span class="h" property="rdfs:label">AssetRendition</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/ImageObject">ImageObject</a></span>
+    </div> 
+      
+    <div typeof="rdfs:Class" resource="http://schema.org/Content">
+      <span class="h" property="rdfs:label">Content</span>
+      <span property="rdfs:comment">Content is a unit of marketing messaging. Content can be used across different channels and within multiple campaigns, and may comprise one or more assets as well as meta information. Content can be structured, e.g. product information, or unstructured, e.g. a web page or a screen in a mobile application.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Resource">Resource</a></span>
+    </div>  
+    <div typeof="rdfs:Class" resource="http://schema.org/Page">
+      <span class="h" property="rdfs:label">Page</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Content">Content</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Offer">
+      <span class="h" property="rdfs:label">Offer</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Content">Content</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/App">
+      <span class="h" property="rdfs:label">App</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Content">Content</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Product">
+      <span class="h" property="rdfs:label">Product</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Content">Content</a></span>
+      <link property="owl:equivalentClass" href="http://schema.org/Product"/>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Email">
+      <span class="h" property="rdfs:label">Email</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Content">Content</a></span>
+    </div>
+      
+    <div typeof="rdfs:Class" resource="http://schema.org/Channels">
+      <span class="h" property="rdfs:label">Channels</span>
+      <span property="rdfs:comment">Channels are where content is consumed by members of an audience. The association between channels and content can be more or less static through typical publishing processes, or can be managed dynamically according to the rules based on a consumer’s context and formulated as part of a campaign plan. A channel has physical properties that determine how content can be delivered. The nature of a channel also dictates what metrics can be collected or which dimensions of the context are available and applicable.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Resource">Resource</a></span>
+    </div>
+      
+      
+    <div typeof="rdfs:Class" resource="http://schema.org/Audiences">
+      <span class="h" property="rdfs:label">Audiences</span>
+      <span property="rdfs:comment">Audiences are groups of people targeted by a campaign. An individual’s membership in an audience can be determined based on a set of rules, based on the context in which content is experienced, or based on a fixed list, such as a list of email subscribers, members in a LinkedIn group, Twitter followers of someone, and so on.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Resource">Resource</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Audience">
+      <span class="h" property="rdfs:label">Audience</span>
+      <span property="rdfs:comment"></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Audiences">Audiences</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Segment">
+      <span class="h" property="rdfs:label">Segment</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Audiences">Audiences</a></span>
+    </div>
+      
+    <div typeof="rdfs:Class" resource="http://schema.org/Metrics">
+      <span class="h" property="rdfs:label">Metrics</span>
+      <span property="rdfs:comment">Metrics drives modern marketing. Data-driven marketers assess campaign success and calculate attribution on the basis of analysis of collected data. Since data is a broad and abstract term, we often prefer metrics in marketing. Metrics are the units of measurement that matter to the marketer.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Resource">Resource</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Metric">
+      <span class="h" property="rdfs:label">Metric</span>
+      <span property="rdfs:comment"></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Metrics">Metrics</a></span>
+    </div>
+      
+    <div typeof="rdfs:Class" resource="http://schema.org/Campaigns">
+      <span class="h" property="rdfs:label">Campaigns</span>
+      <span property="rdfs:comment">The Campaign is the central concept of marketing that touches a marketer’s work every single day. Defined as a series of directed steps in order to achieve a specific goal, campaigns are what marketers are planning, what marketing tools are executing and what analytics are monitoring and reporting on.
+Campaigns determine what (Content) will be displayed to whom (Audiences), where (Channels), and when. Campaigns often have a specific goal.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Resource">Resource</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Campaign">
+      <span class="h" property="rdfs:label">Campaign</span>
+      <span property="rdfs:comment"></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Campaigns">Campaigns</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/brand">
+      <span class="h" property="rdfs:label">brand</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Campaign">Campaign</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Brand">Brand</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Brand">
+      <span class="h" property="rdfs:label">Brand</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Campaigns">Campaigns</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/activity">
+      <span class="h" property="rdfs:label">activity</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Brand">Brand</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Activity">Activity</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Activity">
+      <span class="h" property="rdfs:label">Activity</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Campaigns">Campaigns</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/experience">
+      <span class="h" property="rdfs:label">experience</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Activity">Activity</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Experience">Experience</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/Experience">
+      <span class="h" property="rdfs:label">Experience</span>
+      <span property="rdfs:comment"></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Campaigns">Campaigns</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/offer">
+      <span class="h" property="rdfs:label">offer</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Experience">Experience</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Offer">Offer</a></span>
+    </div>
+      
+    <div typeof="rdfs:Class" resource="http://schema.org/Context">
+      <span class="h" property="rdfs:label">Context</span>
+      <span property="rdfs:comment">Context is the collection of information pertaining to a person, a consumer or visitor, at the time of experience, and it contains information about the visitor, the current channel, and content. The context information that can be determined at a specific time is dependent on the channel. Aggregating context data leads to metrics or definition of audiences.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Resource">Resource</a></span>
+    </div>
+      
+    <div typeof="rdfs:Class" resource="http://schema.org/Folder">
+      <span class="h" property="rdfs:label">Folder</span>
+      <span property="rdfs:comment"></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Resource">Resource</a></span>
+    </div>
+    
+    <div typeof="rdfs:Class" resource="http://schema.org/Action">
+      <span class="h" property="rdfs:label">Action</span>
+      <span property="rdfs:comment">An action performed on a Resource.</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
+    </div>
+    
+    
+    
+    <div typeof="rdf:Property" resource="http://schema.org/name">
+      <span class="h" property="rdfs:label">name</span>
+      <span property="rdfs:comment">The name of the item.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Resource">Resource</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/description">
+      <span class="h" property="rdfs:label">description</span>
+      <span property="rdfs:comment">A short description of the item.</span>
+      <link property="owl:equivalentProperty" href="http://purl.org/dc/terms/description"/>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Resource">Resource</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/url">
+      <span class="h" property="rdfs:label">url</span>
+      <span property="rdfs:comment">URL of the item.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Resource">Resource</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/image">
+      <span class="h" property="rdfs:label">image</span>
+      <span property="rdfs:comment">An image of the item.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Resource">Resource</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
+    </div>
+    
+    <div typeof="rdf:Property" resource="http://schema.org/item">
+      <span class="h" property="rdfs:label">item</span>
+      <span property="rdfs:comment">A Resource contained in the current Folder or collection.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Folder">Folder</a></span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AddAction">AddAction</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Resource">Resource</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/rendition">
+      <span class="h" property="rdfs:label">rendition</span>
+      <span property="rdfs:comment">A rendition of the Asset.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Asset">Asset</a></span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AddAction">AddAction</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/AssetRendition">AssetRendition</a></span>
+    </div>
+    
+    
+    <div typeof="rdfs:Class" resource="http://schema.org/ImageObject">
+      <span class="h" property="rdfs:label">ImageObject</span>
+      <span property="rdfs:comment">An image file.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/DataType">DataType</a></span>
+       <link property="owl:equivalentClass" href="http://purl.org/dc/dcmitype/Image"/>
+    </div>
+    
+    
+    
+
+    <div typeof="rdf:Property" resource="http://schema.org/potentialAction">
+      <span class="h" property="rdfs:label">potentialAction</span>
+      <span property="rdfs:comment">Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Resource">Resource</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Action">Action</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/EditAction">
+      <span class="h" property="rdfs:label">EditAction</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Action">Action</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/AddAction">
+      <span class="h" property="rdfs:label">AddAction</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Action">Action</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/UploadAction">
+      <span class="h" property="rdfs:label">UploadAction</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Action">Action</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/file">
+      <span class="h" property="rdfs:label">file</span>
+      <span property="rdfs:comment">Indicates the target resource to be linked.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/UploadAction">UploadAction</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/DeleteAction">
+      <span class="h" property="rdfs:label">DeleteAction</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Action">Action</a></span>
+    </div>
+    <div typeof="rdfs:Class" resource="http://schema.org/LinkAction">
+      <span class="h" property="rdfs:label">LinkAction</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Action">Action</a></span>
+    </div>
+    <div typeof="rdf:Property" resource="http://schema.org/target">
+      <span class="h" property="rdfs:label">target</span>
+      <span property="rdfs:comment">Indicates the target resource to be linked.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/LinkAction">LinkAction</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Resource">Resource</a></span>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!--div typeof="rdfs:Class" resource="http://schema.org/CreativeWork">
       <span class="h" property="rdfs:label">CreativeWork</span>
       <span property="rdfs:comment">The most generic kind of creative work, including books, movies, photographs, software programs, etc.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
-       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews">rNews</a></span></div>
+       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews">rNews</a></span></div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/WebPage">
       <span class="h" property="rdfs:label">WebPage</span>
@@ -56,17 +325,17 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/WebPage">WebPage</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Organization">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Organization">
       <span class="h" property="rdfs:label">Organization</span>
       <span property="rdfs:comment">An organization such as a school, NGO, corporation, club, etc.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Place">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Place">
       <span class="h" property="rdfs:label">Place</span>
       <span property="rdfs:comment">Entities that have a somewhat fixed, physical extension.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/LocalBusiness">
       <span class="h" property="rdfs:label">LocalBusiness</span>
@@ -112,11 +381,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EntertainmentBusiness">EntertainmentBusiness</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Intangible">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Intangible">
       <span class="h" property="rdfs:label">Intangible</span>
       <span property="rdfs:comment">A utility class that serves as the umbrella for a number of &#39;intangible&#39; things such as quantities, structured values, etc.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/Offer">
       <span class="h" property="rdfs:label">Offer</span>
@@ -129,11 +398,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
        <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsProperties">GoodRelationsProperties</a></span></div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/AggregateOffer">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/AggregateOffer">
       <span class="h" property="rdfs:label">AggregateOffer</span>
       <span property="rdfs:comment">When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Offer">Offer</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/Rating">
       <span class="h" property="rdfs:label">Rating</span>
@@ -165,11 +434,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EntertainmentBusiness">EntertainmentBusiness</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/MedicalEntity">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/MedicalEntity">
       <span class="h" property="rdfs:label">MedicalEntity</span>
       <span property="rdfs:comment">The most generic type of entity related to health and the practice of medicine.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
-       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc">WikiDoc</a></span></div>
+       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc">WikiDoc</a></span></div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/AnatomicalStructure">
       <span class="h" property="rdfs:label">AnatomicalStructure</span>
@@ -251,11 +520,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService">ProfessionalService</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Audience">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Audience">
       <span class="h" property="rdfs:label">Audience</span>
       <span property="rdfs:comment">Intended audience for an item, i.e. the group for whom the item was created.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
-    </div>
+    </div-->
 
     <div typeof="http://schema.org/Audience" resource="http://schema.org/Researcher">
       <span class="h" property="rdfs:label">Researcher</span>
@@ -542,12 +811,12 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure">CivicStructure</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Event">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Event">
       <span class="h" property="rdfs:label">Event</span>
       <span property="rdfs:comment">An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the &#39;offers&#39; property. Repeated events may be structured as separate Event objects.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
        <link property="owl:equivalentClass" href="http://purl.org/dc/dcmitype/Event"/>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/BusinessEvent">
       <span class="h" property="rdfs:label">BusinessEvent</span>
@@ -1273,12 +1542,12 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CollectionPage">CollectionPage</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/ImageObject">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/ImageObject">
       <span class="h" property="rdfs:label">ImageObject</span>
       <span property="rdfs:comment">An image file.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/MediaObject">MediaObject</a></span>
        <link property="owl:equivalentClass" href="http://purl.org/dc/dcmitype/Image"/>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/ImagingTest">
       <span class="h" property="rdfs:label">ImagingTest</span>
@@ -1546,7 +1815,7 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/DoseSchedule">DoseSchedule</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/PeopleAudience">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/PeopleAudience">
       <span class="h" property="rdfs:label">PeopleAudience</span>
       <span property="rdfs:comment">A set of characteristics belonging to people, e.g. who compose an item&#39;s target audience.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Audience">Audience</a></span>
@@ -1574,7 +1843,7 @@
     <div typeof="http://schema.org/MedicalAudience" resource="http://schema.org/Patient">
       <span class="h" property="rdfs:label">Patient</span>
       <span property="rdfs:comment">Patients.</span>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/MedicalCause">
       <span class="h" property="rdfs:label">MedicalCause</span>
@@ -2500,12 +2769,12 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure">CivicStructure</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Person">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Person">
       <span class="h" property="rdfs:label">Person</span>
       <span property="rdfs:comment">A person (alive, dead, undead, or fictional).</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
        <link property="owl:equivalentClass" href="http://xmlns.com/foaf/0.1/Person" />
-       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews">rNews</a></span></div>
+       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews">rNews</a></span></div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/PetStore">
       <span class="h" property="rdfs:label">PetStore</span>
@@ -2712,11 +2981,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/MedicalIndication">MedicalIndication</a></span>
        <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc">WikiDoc</a></span></div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Product">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Product">
       <span class="h" property="rdfs:label">Product</span>
       <span property="rdfs:comment">Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
-       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsProperties">GoodRelationsProperties</a></span></div>
+       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsProperties">GoodRelationsProperties</a></span></div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/ProfilePage">
       <span class="h" property="rdfs:label">ProfilePage</span>
@@ -3273,11 +3542,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure">CivicStructure</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Brand">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Brand">
       <span class="h" property="rdfs:label">Brand</span>
       <span property="rdfs:comment">A brand is a name used by an organization or business person for labeling a product, product group, or similar.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
-       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div>
+       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/BusinessEntityType">
       <span class="h" property="rdfs:label">BusinessEntityType</span>
@@ -3401,11 +3670,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
        <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/IndividualProduct">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/IndividualProduct">
       <span class="h" property="rdfs:label">IndividualProduct</span>
       <span property="rdfs:comment">A single, identifiable product instance (e.g. a laptop with a particular serial number).</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Product">Product</a></span>
-       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div>
+       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/OpeningHoursSpecification">
       <span class="h" property="rdfs:label">OpeningHoursSpecification</span>
@@ -3438,11 +3707,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/PriceSpecification">PriceSpecification</a></span>
        <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/ProductModel">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/ProductModel">
       <span class="h" property="rdfs:label">ProductModel</span>
       <span property="rdfs:comment">A datasheet or vendor specification of a product (in the sense of a prototypical description).</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Product">Product</a></span>
-       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div>
+       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/QualitativeValue">
       <span class="h" property="rdfs:label">QualitativeValue</span>
@@ -3456,11 +3725,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/StructuredValue">StructuredValue</a></span>
        <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/SomeProducts">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/SomeProducts">
       <span class="h" property="rdfs:label">SomeProducts</span>
       <span property="rdfs:comment">A placeholder for multiple similar products of the same kind.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Product">Product</a></span>
-       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div>
+       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span></div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/TypeAndQuantityNode">
       <span class="h" property="rdfs:label">TypeAndQuantityNode</span>
@@ -3523,11 +3792,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
        <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass">LRMIClass</a></span></div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/EducationalAudience">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/EducationalAudience">
       <span class="h" property="rdfs:label">EducationalAudience</span>
       <span property="rdfs:comment">An EducationalAudience.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Audience">Audience</a></span>
-       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass">LRMIClass</a></span></div>
+       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass">LRMIClass</a></span></div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/DataCatalog">
       <span class="h" property="rdfs:label">DataCatalog</span>
@@ -3579,11 +3848,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/PublicationEvent">PublicationEvent</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/BroadcastService">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/BroadcastService">
       <span class="h" property="rdfs:label">BroadcastService</span>
       <span property="rdfs:comment">A delivery service through which content is provided via broadcast over the air or online.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/Clip">
       <span class="h" property="rdfs:label">Clip</span>
@@ -3627,11 +3896,11 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Clip">Clip</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/BusinessAudience">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/BusinessAudience">
       <span class="h" property="rdfs:label">BusinessAudience</span>
       <span property="rdfs:comment">A set of characteristics belonging to businesses, e.g. who compose an item&#39;s target audience.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Audience">Audience</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/ContactPointOption">
       <span class="h" property="rdfs:label">ContactPointOption</span>
@@ -3781,7 +4050,7 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Action">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Action">
       <span class="h" property="rdfs:label">Action</span>
       <span property="rdfs:comment">An action performed by a direct agent and indirect     participants upon a direct object. Optionally happens at a location     with the help of an inanimate instrument. The execution of the action     may produce a result. Specific action sub-type documentation specifies     the exact expectation of each argument/role.
       &lt;br/&gt;&lt;br/&gt;See also &lt;a href="http://blog.schema.org/2014/04/announcing-schemaorg-actions.html"&gt;blog post&lt;/a&gt;
@@ -4463,15 +4732,15 @@
       <span class="h" property="rdfs:label">WriteAction</span>
       <span property="rdfs:comment">The act of authoring written creative content.</span>
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CreateAction">CreateAction</a></span>
-    </div>
+    </div-->
 
-    <div typeof="rdf:Property" resource="http://schema.org/about">
+    <!--div typeof="rdf:Property" resource="http://schema.org/about">
       <span class="h" property="rdfs:label">about</span>
       <span property="rdfs:comment">The subject matter of the content.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CommunicateAction">CommunicateAction</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/acceptedOffer">
       <span class="h" property="rdfs:label">acceptedOffer</span>
       <span property="rdfs:comment">The offer(s) -- e.g., product, quantity and price combinations -- included in the order.</span>
@@ -4607,13 +4876,13 @@
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/additionalType">
+    <!--div typeof="rdf:Property" resource="http://schema.org/additionalType">
       <span class="h" property="rdfs:label">additionalType</span>
       <span property="rdfs:comment">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the &#39;typeof&#39; attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.</span>
       <link property="rdfs:subPropertyOf" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" />
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/additionalVariable">
       <span class="h" property="rdfs:label">additionalVariable</span>
       <span property="rdfs:comment">Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.</span>
@@ -4684,13 +4953,13 @@
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/agent">
+    <!--div typeof="rdf:Property" resource="http://schema.org/agent">
       <span class="h" property="rdfs:label">agent</span>
       <span property="rdfs:comment">The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/aggregateRating">
       <span class="h" property="rdfs:label">aggregateRating</span>
       <span property="rdfs:comment">The overall rating, based on a collection of reviews or ratings, of the item.</span>
@@ -4732,12 +5001,12 @@
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AlignmentObject">AlignmentObject</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/alternateName">
+    <!--div typeof="rdf:Property" resource="http://schema.org/alternateName">
       <span class="h" property="rdfs:label">alternateName</span>
       <span property="rdfs:comment">An alias for the item.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/alternativeHeadline">
       <span class="h" property="rdfs:label">alternativeHeadline</span>
       <span property="rdfs:comment">A secondary title of the CreativeWork.</span>
@@ -4909,7 +5178,7 @@
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/audience">
+    <!--div typeof="rdf:Property" resource="http://schema.org/audience">
       <span class="h" property="rdfs:label">audience</span>
       <span property="rdfs:comment">The intended audience of the item, i.e. the group for whom the item was created.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
@@ -4922,7 +5191,7 @@
       <span property="rdfs:comment">The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Audience">Audience</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/audio">
       <span class="h" property="rdfs:label">audio</span>
       <span property="rdfs:comment">An embedded audio object.</span>
@@ -5158,7 +5427,7 @@
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/LocalBusiness">LocalBusiness</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/brand">
+    <!--div typeof="rdf:Property" resource="http://schema.org/brand">
       <span class="h" property="rdfs:label">brand</span>
       <span property="rdfs:comment">The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
@@ -5166,7 +5435,7 @@
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Product">Product</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Brand">Brand</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/breadcrumb">
       <span class="h" property="rdfs:label">breadcrumb</span>
       <span property="rdfs:comment">A set of links that can help a user understand and navigate a website hierarchy.</span>
@@ -5260,7 +5529,7 @@
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Dataset">Dataset</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/DataCatalog">DataCatalog</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/category">
+    <!--div typeof="rdf:Property" resource="http://schema.org/category">
       <span class="h" property="rdfs:label">category</span>
       <span property="rdfs:comment">A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Offer">Offer</a></span>
@@ -5269,7 +5538,7 @@
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/PhysicalActivityCategory">PhysicalActivityCategory</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/cause">
       <span class="h" property="rdfs:label">cause</span>
       <span property="rdfs:comment">An underlying cause. More specifically, one of the causative agent(s) that are most directly responsible for the pathophysiologic process that eventually results in the occurrence.</span>
@@ -5386,13 +5655,13 @@
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/collection">
+    <!--div typeof="rdf:Property" resource="http://schema.org/collection">
       <span class="h" property="rdfs:label">collection</span>
       <span property="rdfs:comment">A sub property of object. The collection target of the action.</span>
       <link property="rdfs:subPropertyOf" href="http://schema.org/object" />
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/UpdateAction">UpdateAction</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/color">
       <span class="h" property="rdfs:label">color</span>
       <span property="rdfs:comment">The color of the product.</span>
@@ -5709,13 +5978,13 @@
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Distance">Distance</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/description">
+    <!--div typeof="rdf:Property" resource="http://schema.org/description">
       <span class="h" property="rdfs:label">description</span>
       <span property="rdfs:comment">A short description of the item.</span>
       <link property="owl:equivalentProperty" href="http://purl.org/dc/terms/description"/>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/device">
       <span class="h" property="rdfs:label">device</span>
       <span property="rdfs:comment">Device required to run the application. Used in cases where a specific make/model is required to run the application.</span>
@@ -5728,12 +5997,12 @@
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/DDxElement">DDxElement</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/MedicalCondition">MedicalCondition</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/diagram">
+    <!--div typeof="rdf:Property" resource="http://schema.org/diagram">
       <span class="h" property="rdfs:label">diagram</span>
       <span property="rdfs:comment">An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AnatomicalStructure">AnatomicalStructure</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/diet">
       <span class="h" property="rdfs:label">diet</span>
       <span property="rdfs:comment">A sub property of instrument. The diet used in this action.</span>
@@ -5843,18 +6112,18 @@
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Property">Property</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Class">Class</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/inverseOf">
+    <!--div typeof="rdf:Property" resource="http://schema.org/inverseOf">
       <span class="h" property="rdfs:label">inverseOf</span>
       <span property="rdfs:comment">Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Property">Property</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Property">Property</a></span>
-    </div>
-    <div typeof="rdf:Property" resource="http://schema.org/supersededBy">
+    </div-->
+    <!--div typeof="rdf:Property" resource="http://schema.org/supersededBy">
       <span class="h" property="rdfs:label">supersededBy</span>
       <span property="rdfs:comment">Relates a property to one that supersedes it.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Property">Property</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Property">Property</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/doorTime">
       <span class="h" property="rdfs:label">doorTime</span>
       <span property="rdfs:comment">The time admission will commence.</span>
@@ -6115,7 +6384,7 @@
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/endTime">
+    <!--div typeof="rdf:Property" resource="http://schema.org/endTime">
       <span class="h" property="rdfs:label">endTime</span>
       <span property="rdfs:comment">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.
 
@@ -6123,7 +6392,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/FoodEstablishmentReservation">FoodEstablishmentReservation</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/DateTime">DateTime</a></span>
-    </div>
+    </div-->
    <div typeof="rdf:Property" resource="http://schema.org/entertainmentBusiness">
       <span class="h" property="rdfs:label">entertainmentBusiness</span>
       <span property="rdfs:comment">A sub property of location. The entertainment business where the action occurred.</span>
@@ -6235,7 +6504,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span property="rdfs:comment">exif data for this object.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-	  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
     </div>
     <div typeof="rdf:Property" resource="http://schema.org/expectedArrivalFrom">
       <span class="h" property="rdfs:label">expectedArrivalFrom</span>
@@ -6437,12 +6705,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/GeoCoordinates">GeoCoordinates</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/GeoShape">GeoShape</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/geographicArea">
+    <!--div typeof="rdf:Property" resource="http://schema.org/geographicArea">
       <span class="h" property="rdfs:label">geographicArea</span>
       <span property="rdfs:comment">The geographic area associated with the audience.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Audience">Audience</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/AdministrativeArea">AdministrativeArea</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/givenName">
       <span class="h" property="rdfs:label">givenName</span>
       <span property="rdfs:comment">Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property.</span>
@@ -6615,13 +6883,13 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <!--      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/BookSeries">BookSeries</a></span> -->
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/image">
+    <!--div typeof="rdf:Property" resource="http://schema.org/image">
       <span class="h" property="rdfs:label">image</span>
       <span property="rdfs:comment">An image of the item. This can be a &lt;a href=&quot;http://schema.org/URL&quot;&gt;URL&lt;/a&gt; or a fully described &lt;a href=&quot;http://schema.org/ImageObject&quot;&gt;ImageObject&lt;/a&gt;.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/imagingTechnique">
       <span class="h" property="rdfs:label">imagingTechnique</span>
       <span property="rdfs:comment">Imaging technique used.</span>
@@ -6714,12 +6982,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SoftwareApplication">SoftwareApplication</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/instrument">
+    <!--div typeof="rdf:Property" resource="http://schema.org/instrument">
       <span class="h" property="rdfs:label">instrument</span>
       <span property="rdfs:comment">The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/intensity">
       <span class="h" property="rdfs:label">intensity</span>
       <span property="rdfs:comment">Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.</span>
@@ -6900,13 +7168,13 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Demand">Demand</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Product">Product</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/itemReviewed">
+    <!--div typeof="rdf:Property" resource="http://schema.org/itemReviewed">
       <span class="h" property="rdfs:label">itemReviewed</span>
       <span property="rdfs:comment">The item that is being reviewed/rated.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AggregateRating">AggregateRating</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Review">Review</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/itemShipped">
       <span class="h" property="rdfs:label">itemShipped</span>
       <span property="rdfs:comment">Item(s) being shipped.</span>
@@ -7023,7 +7291,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/GeoShape">GeoShape</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/location">
+    <!--div typeof="rdf:Property" resource="http://schema.org/location">
       <span class="h" property="rdfs:label">location</span>
       <span property="rdfs:comment">The location of the event, organization or action.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
@@ -7031,8 +7299,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Place">Place</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/PostalAddress">PostalAddress</a></span>
-    </div>
-    <div typeof="rdf:Property" resource="http://schema.org/logo">
+    </div-->
+    <!--div typeof="rdf:Property" resource="http://schema.org/logo">
       <span class="h" property="rdfs:label">logo</span>
       <span property="rdfs:comment">An associated logo.</span>
       <link property="rdfs:subPropertyOf" href="http://schema.org/image" />
@@ -7042,7 +7310,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Brand">Brand</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/longitude">
       <span class="h" property="rdfs:label">longitude</span>
       <span property="rdfs:comment">The longitude of a location. For example &lt;code&gt;-122.08585&lt;/code&gt;.</span>
@@ -7072,21 +7340,21 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     </div>
 
 
-    <div typeof="rdf:Property" resource="http://schema.org/mainEntity">
+    <!--div typeof="rdf:Property" resource="http://schema.org/mainEntity">
       <span class="h" property="rdfs:label">mainEntity</span>
       <span property="rdfs:comment">Indicates the primary entity described in some page or other CreativeWork.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
       <link property="http://schema.org/inverseOf" href="http://schema.org/mainEntityOfPage"/>
-    </div>
+    </div-->
 
-    <div typeof="rdf:Property" resource="http://schema.org/mainEntityOfPage">
+    <!--div typeof="rdf:Property" resource="http://schema.org/mainEntityOfPage">
       <span class="h" property="rdfs:label">mainEntityOfPage</span>
       <span property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
       <link property="http://schema.org/inverseOf" href="http://schema.org/mainEntity"/>
-   </div>
+   </div-->
 
     <div typeof="rdf:Property" resource="http://schema.org/makesOffer">
       <span class="h" property="rdfs:label">makesOffer</span>
@@ -7140,9 +7408,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span class="h" property="rdfs:label">maxValue</span>
       <span property="rdfs:comment">The upper value of some characteristic or property.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
-      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
-	  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValueSpecification">PropertyValueSpecification</a></span>
-	  
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValueSpecification">PropertyValueSpecification</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
     </div>
     <div typeof="rdf:Property" resource="http://schema.org/mechanismOfAction">
@@ -7200,12 +7466,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/mentions">
+    <!--div typeof="rdf:Property" resource="http://schema.org/mentions">
       <span class="h" property="rdfs:label">mentions</span>
       <span property="rdfs:comment">Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/menu">
       <span class="h" property="rdfs:label">menu</span>
       <span property="rdfs:comment">Either the actual menu or a URL of the menu.</span>
@@ -7231,8 +7497,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span class="h" property="rdfs:label">minValue</span>
       <span property="rdfs:comment">The lower value of some characteristic or property.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
-      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
-	  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValueSpecification">PropertyValueSpecification</a></span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValueSpecification">PropertyValueSpecification</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
     </div>
     <div typeof="rdf:Property" resource="http://schema.org/model">
@@ -7279,12 +7544,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/name">
+    <!--div typeof="rdf:Property" resource="http://schema.org/name">
       <span class="h" property="rdfs:label">name</span>
       <span property="rdfs:comment">The name of the item.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/nationality">
       <span class="h" property="rdfs:label">nationality</span>
       <span property="rdfs:comment">Nationality of the person.</span>
@@ -7375,12 +7640,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Recipe">Recipe</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/NutritionInformation">NutritionInformation</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/object">
+    <!--div typeof="rdf:Property" resource="http://schema.org/object">
       <span class="h" property="rdfs:label">object</span>
       <span property="rdfs:comment">The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn&#39;t). e.g. John read *a book*.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/occupationalCategory">
       <span class="h" property="rdfs:label">occupationalCategory</span>
       <span property="rdfs:comment">Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual label and formal code, with the property repeated for each applicable value.</span>
@@ -7434,14 +7699,14 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ExerciseAction">ExerciseAction</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/option">
+    <!--div typeof="rdf:Property" resource="http://schema.org/option">
       <span class="h" property="rdfs:label">option</span>
       <span property="rdfs:comment">A sub property of object. The options subject to this action.</span>
       <link property="rdfs:subPropertyOf" href="http://schema.org/object" />
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChooseAction">ChooseAction</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/orderDate">
       <span class="h" property="rdfs:label">orderDate</span>
       <span property="rdfs:comment">Date order was placed.</span>
@@ -7541,13 +7806,13 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/BroadcastService">BroadcastService</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/BroadcastService">BroadcastService</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/participant">
+    <!--div typeof="rdf:Property" resource="http://schema.org/participant">
       <span class="h" property="rdfs:label">participant</span>
       <span property="rdfs:comment">Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/partOfEpisode">
       <span class="h" property="rdfs:label">partOfEpisode</span>
       <span property="rdfs:comment">The episode to which this clip belongs.</span>
@@ -7669,34 +7934,34 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SoftwareApplication">SoftwareApplication</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/permitAudience">
+    <!--div typeof="rdf:Property" resource="http://schema.org/permitAudience">
       <span class="h" property="rdfs:label">permitAudience</span>
       <span property="rdfs:comment">The target audience for this permit.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Permit">Permit</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Audience">Audience</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/phase">
       <span class="h" property="rdfs:label">phase</span>
       <span property="rdfs:comment">The phase of the trial.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/MedicalTrial">MedicalTrial</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/photo">
+    <!--div typeof="rdf:Property" resource="http://schema.org/photo">
       <span class="h" property="rdfs:label">photo</span>
       <span property="rdfs:comment">A photograph of this place.</span>
       <link property="rdfs:subPropertyOf" href="http://schema.org/image" />
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Photograph">Photograph</a></span>
-    </div>
-    <div typeof="rdf:Property" resource="http://schema.org/photos">
+    </div-->
+    <!--div typeof="rdf:Property" resource="http://schema.org/photos">
       <span class="h" property="rdfs:label">photos</span>
       <span property="http://schema.org/supersededBy" href="http://schema.org/photo"/>
       <span property="rdfs:comment">Photographs of this place.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Photograph">Photograph</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/physiologicalBenefits">
       <span class="h" property="rdfs:label">physiologicalBenefits</span>
       <span property="rdfs:comment">Specific physiologic benefits associated to the plan.</span>
@@ -7869,12 +8134,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Offer">Offer</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Date">Date</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/primaryImageOfPage">
+    <!--div typeof="rdf:Property" resource="http://schema.org/primaryImageOfPage">
       <span class="h" property="rdfs:label">primaryImageOfPage</span>
       <span property="rdfs:comment">Indicates the main image on the page.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/WebPage">WebPage</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/primaryPrevention">
       <span class="h" property="rdfs:label">primaryPrevention</span>
       <span property="rdfs:comment">A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.</span>
@@ -7936,12 +8201,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/produces">
+    <!--div typeof="rdf:Property" resource="http://schema.org/produces">
       <span class="h" property="rdfs:label">produces</span>
       <span property="rdfs:comment">The tangible thing generated by the service, e.g. a passport, permit, etc.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Service">Service</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/productID">
       <span class="h" property="rdfs:label">productID</span>
       <span property="rdfs:comment">The product identifier, such as ISBN. For example: &lt;code&gt;&amp;lt;meta itemprop=&#39;productID&#39; content=&#39;isbn:123-456-789&#39;/&amp;gt;&lt;/code&gt;.</span>
@@ -7976,12 +8241,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/TechArticle">TechArticle</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/programmingLanguage">
+    <!--div typeof="rdf:Property" resource="http://schema.org/programmingLanguage">
       <span class="h" property="rdfs:label">programmingLanguage</span>
       <span property="rdfs:comment">The computer programming language.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Code">Code</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/programmingModel">
       <span class="h" property="rdfs:label">programmingModel</span>
       <span property="rdfs:comment">Indicates whether API is managed or unmanaged.</span>
@@ -8038,7 +8303,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/purpose">
+    <!--div typeof="rdf:Property" resource="http://schema.org/purpose">
       <span class="h" property="rdfs:label">purpose</span>
       <span property="rdfs:comment">A goal towards an action is taken. Can be concrete or abstract.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/MedicalDevice">MedicalDevice</a></span>
@@ -8046,7 +8311,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PayAction">PayAction</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/MedicalDevicePurpose">MedicalDevicePurpose</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/qualifications">
       <span class="h" property="rdfs:label">qualifications</span>
       <span property="rdfs:comment">Specific qualifications required for this role.</span>
@@ -8124,7 +8389,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Recipe">Recipe</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/recipient">
+    <!--div typeof="rdf:Property" resource="http://schema.org/recipient">
       <span class="h" property="rdfs:label">recipient</span>
       <span property="rdfs:comment">A sub property of participant. The participant who is at the receiving end of the action.</span>
       <link property="rdfs:subPropertyOf" href="http://schema.org/participant" />
@@ -8139,7 +8404,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Audience">Audience</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/recognizingAuthority">
       <span class="h" property="rdfs:label">recognizingAuthority</span>
       <span property="rdfs:comment">If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.</span>
@@ -8258,20 +8523,20 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ExercisePlan">ExercisePlan</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/replacee">
+    <!--div typeof="rdf:Property" resource="http://schema.org/replacee">
       <span class="h" property="rdfs:label">replacee</span>
       <span property="rdfs:comment">A sub property of object. The object that is being replaced.</span>
       <link property="rdfs:subPropertyOf" href="http://schema.org/object" />
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ReplaceAction">ReplaceAction</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
-    <div typeof="rdf:Property" resource="http://schema.org/replacer">
+    </div-->
+    <!--div typeof="rdf:Property" resource="http://schema.org/replacer">
       <span class="h" property="rdfs:label">replacer</span>
       <span property="rdfs:comment">A sub property of object. The object that replaces.</span>
       <link property="rdfs:subPropertyOf" href="http://schema.org/object" />
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ReplaceAction">ReplaceAction</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/replyToUrl">
       <span class="h" property="rdfs:label">replyToUrl</span>
       <span property="rdfs:comment">The URL at which a reply may be posted to the specified UserComment.</span>
@@ -8327,12 +8592,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ExercisePlan">ExercisePlan</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/result">
+    <!--div typeof="rdf:Property" resource="http://schema.org/result">
       <span class="h" property="rdfs:label">result</span>
       <span property="rdfs:comment">The result produced in the action. e.g. John wrote *a book*.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/resultReview">
       <span class="h" property="rdfs:label">resultReview</span>
       <span property="rdfs:comment">A sub property of result. The review that resulted in the performing of the action.</span>
@@ -8423,12 +8688,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/EmployeeRole">EmployeeRole</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/sameAs">
+    <!--div typeof="rdf:Property" resource="http://schema.org/sameAs">
       <span class="h" property="rdfs:label">sameAs</span>
       <span property="rdfs:comment">URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Freebase page, or official website.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/sampleType">
       <span class="h" property="rdfs:label">sampleType</span>
       <span property="rdfs:comment">Full (compile ready) solution, code snippet, inline code, scripts, template.</span>
@@ -8447,13 +8712,13 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PlanAction">PlanAction</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/DateTime">DateTime</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/screenshot">
+    <!--div typeof="rdf:Property" resource="http://schema.org/screenshot">
       <span class="h" property="rdfs:label">screenshot</span>
       <span property="rdfs:comment">A link to a screenshot image of the app.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SoftwareApplication">SoftwareApplication</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/season">
       <span class="h" property="rdfs:label">season</span>
       <span property="rdfs:comment">A season in a media series.</span>
@@ -8505,7 +8770,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
       <link property="rdfs:subPropertyOf" href="http://schema.org/participant" />
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/sender">
+    <!--div typeof="rdf:Property" resource="http://schema.org/sender">
       <span class="h" property="rdfs:label">sender</span>
       <span property="rdfs:comment">A sub property of participant. The participant who is at the sending end of the action.</span>
       <link property="rdfs:subPropertyOf" href="http://schema.org/participant" />
@@ -8513,7 +8778,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Audience">Audience</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/sensoryUnit">
       <span class="h" property="rdfs:label">sensoryUnit</span>
       <span property="rdfs:comment">The neurological pathway extension that inputs and sends information to the brain or spinal cord.</span>
@@ -8548,12 +8813,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Service">Service</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/AdministrativeArea">AdministrativeArea</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/serviceAudience">
+    <!--div typeof="rdf:Property" resource="http://schema.org/serviceAudience">
       <span class="h" property="rdfs:label">serviceAudience</span>
       <span property="rdfs:comment">The audience eligible for this service.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Service">Service</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Audience">Audience</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/serviceLocation">
       <span class="h" property="rdfs:label">serviceLocation</span>
       <span property="rdfs:comment">The location (e.g. civic structure, local business, etc.) where a person can go to access the service.</span>
@@ -8762,7 +9027,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Series">Series</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Date">Date</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/startTime">
+    <!--div typeof="rdf:Property" resource="http://schema.org/startTime">
       <span class="h" property="rdfs:label">startTime</span>
       <span property="rdfs:comment">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.
 
@@ -8770,7 +9035,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/FoodEstablishmentReservation">FoodEstablishmentReservation</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/DateTime">DateTime</a></span>
-    </div>
+    </div-->
    <div typeof="rdf:Property" resource="http://schema.org/status">
       <span class="h" property="rdfs:label">status</span>
       <span property="rdfs:comment">The status of the study (enumerated).</span>
@@ -8982,13 +9247,13 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/thumbnail">
+    <!--div typeof="rdf:Property" resource="http://schema.org/thumbnail">
       <span class="h" property="rdfs:label">thumbnail</span>
       <span property="rdfs:comment">Thumbnail image for an image or video.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoObject">VideoObject</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ImageObject">ImageObject</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/thumbnailUrl">
       <span class="h" property="rdfs:label">thumbnailUrl</span>
       <span property="rdfs:comment">A thumbnail image relevant to the Thing.</span>
@@ -9121,14 +9386,11 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     </div>
     <div typeof="rdf:Property" resource="http://schema.org/unitCode">
       <span class="h" property="rdfs:label">unitCode</span>
-      <span property="rdfs:comment">The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.</span>
-	  
+      <span property="rdfs:comment">The unit of measurement given using the UN/CEFACT Common Code (3 characters).</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/TypeAndQuantityNode">TypeAndQuantityNode</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/UnitPriceSpecification">UnitPriceSpecification</a></span>
-	  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-	  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
     </div>
     <div typeof="rdf:Property" resource="http://schema.org/unsaturatedFatContent">
       <span class="h" property="rdfs:label">unsaturatedFatContent</span>
@@ -9142,12 +9404,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/MediaObject">MediaObject</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Date">Date</a></span>
     </div>
-    <div typeof="rdf:Property" resource="http://schema.org/url">
+    <!--div typeof="rdf:Property" resource="http://schema.org/url">
       <span class="h" property="rdfs:label">url</span>
       <span property="rdfs:comment">URL of the item.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
-    </div>
+    </div-->
     <div typeof="rdf:Property" resource="http://schema.org/usedToDiagnose">
       <span class="h" property="rdfs:label">usedToDiagnose</span>
       <span property="rdfs:comment">A condition the test is used to diagnose.</span>
@@ -9199,14 +9461,10 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     </div>
     <div typeof="rdf:Property" resource="http://schema.org/value">
       <span class="h" property="rdfs:label">value</span>
-      <span property="rdfs:comment">The value of the quantitative value or property value node. For QuantitativeValue, the recommended type for values is &apos;Number&apos;. For PropertyValue, it can be &apos;Text;&apos;, &apos;Number&apos;, &apos;Boolean&apos;, or &apos;StructuredValue&apos;.</span>
+      <span property="rdfs:comment">The value of the product characteristic.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
-	  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
-	  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-	  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Boolean">Boolean</a></span>
-	  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/StructuredValue">StructuredValue</a></span>
-    </div>	
+    </div>
     <div typeof="rdf:Property" resource="http://schema.org/valueAddedTaxIncluded">
       <span class="h" property="rdfs:label">valueAddedTaxIncluded</span>
       <span property="rdfs:comment">Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.</span>
@@ -9218,14 +9476,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span property="rdfs:comment">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QualitativeValue">QualitativeValue</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
-	  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Enumeration">Enumeration</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/StructuredValue">StructuredValue</a></span>
-      <!-- Note: The following is logically redundant, but it will give prominence to the most useful types for user -->
-      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
-      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/QualitativeValue">QualitativeValue</a></span>
-      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
-      <!-- end of hints -->	  
     </div>
     <div typeof="rdf:Property" resource="http://schema.org/vatID">
       <span class="h" property="rdfs:label">vatID</span>
@@ -9535,11 +9787,11 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span property="rdfs:comment">A taxi.</span>
       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Service">Service</a></span>
     </div>
-    <div typeof="rdfs:Class" resource="http://schema.org/Vehicle">
+    <!--div typeof="rdfs:Class" resource="http://schema.org/Vehicle">
       <span class="h" property="rdfs:label">Vehicle</span>
       <span property="rdfs:comment">A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space.</span>
       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Product">Product</a></span>
-    </div>
+    </div-->
     <div typeof="rdfs:Class" resource="http://schema.org/Car">
       <span class="h" property="rdfs:label">Car</span>
       <span property="rdfs:comment">A car is a wheeled, self-powered motor vehicle used for transportation.</span>      
@@ -9561,7 +9813,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       <span class="h" property="rdfs:label">reservationFor</span>
       <span property="rdfs:comment">The thing -- flight, event, restaurant,etc. being reserved.</span>
       <span>domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Reservation">Reservation</a></span>
-      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
+      <!--span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span-->
     </div>
     <div typeof="rdf:Property" resource="http://schema.org/underName">
       <span class="h" property="rdfs:label">underName</span>
@@ -10099,12 +10351,12 @@ postponing for 1.6.
  <h1>Potential Actions</h1>
 
 
-    <div typeof="rdf:Property" resource="http://schema.org/actionStatus">
+    <!--div typeof="rdf:Property" resource="http://schema.org/actionStatus">
       <span class="h" property="rdfs:label">actionStatus</span>
       <span property="rdfs:comment">Indicates the current disposition of the Action.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ActionStatusType">ActionStatusType</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/ActionStatusType">
       <span class="h" property="rdfs:label">ActionStatusType</span>
@@ -10132,19 +10384,19 @@ postponing for 1.6.
       <span property="rdfs:comment">An action that failed to complete. The action's error property and the HTTP return code contain more information about the failure.</span>
     </div>
 
-    <div typeof="rdf:Property" resource="http://schema.org/error">
+    <!--div typeof="rdf:Property" resource="http://schema.org/error">
       <span class="h" property="rdfs:label">error</span>
       <span property="rdfs:comment">For failed actions, more information on the cause of the failure.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
 
-    <div typeof="rdf:Property" resource="http://schema.org/potentialAction">
+    <!--div typeof="rdf:Property" resource="http://schema.org/potentialAction">
       <span class="h" property="rdfs:label">potentialAction</span>
       <span property="rdfs:comment">Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Action">Action</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/EntryPoint">
       <span class="h" property="rdfs:label">EntryPoint</span>
@@ -10154,12 +10406,12 @@ postponing for 1.6.
     </div>
 
 
-    <div typeof="rdf:Property" resource="http://schema.org/target">
+    <!--div typeof="rdf:Property" resource="http://schema.org/target">
       <span class="h" property="rdfs:label">target</span>
       <span property="rdfs:comment">Indicates a target EntryPoint for an Action.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/EntryPoint">EntryPoint</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdf:Property" resource="http://schema.org/httpMethod">
       <span class="h" property="rdfs:label">httpMethod</span>
@@ -10218,13 +10470,13 @@ postponing for 1.6.
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Boolean">Boolean</a></span>
     </div>
 
-    <div typeof="rdf:Property" resource="http://schema.org/defaultValue">
+    <!--div typeof="rdf:Property" resource="http://schema.org/defaultValue">
       <span class="h" property="rdfs:label">defaultValue</span>
       <span property="rdfs:comment">The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValueSpecification">PropertyValueSpecification</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdf:Property" resource="http://schema.org/readonlyValue">
       <span class="h" property="rdfs:label">readonlyValue</span>
@@ -10470,7 +10722,7 @@ postponing for 1.6.
 
     <h1>ItemList and ListItem extras</h1>
 
-    <div typeof="rdf:Property" resource="http://schema.org/itemListElement">
+    <!--div typeof="rdf:Property" resource="http://schema.org/itemListElement">
       <span class="h" property="rdfs:label">itemListElement</span>
       <span property="rdfs:comment">For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.
     &lt;br/&gt;&lt;br/&gt;
@@ -10481,7 +10733,7 @@ postponing for 1.6.
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ListItem">ListItem</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdfs:Class" resource="http://schema.org/ListItem">
       <span class="h" property="rdfs:label">ListItem</span>
@@ -10499,12 +10751,12 @@ postponing for 1.6.
      </div>
     -->
 
-    <div typeof="rdf:Property" resource="http://schema.org/item">
+    <!--div typeof="rdf:Property" resource="http://schema.org/item">
       <span class="h" property="rdfs:label">item</span>
       <span property="rdfs:comment">An entity represented by an entry in a list (e.g. an 'artist' in a list of 'artists')’.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ListItem">ListItem</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    </div>
+    </div-->
 
     <div typeof="rdf:Property" resource="http://schema.org/previousItem">
       <span class="h" property="rdfs:label">previousItem</span>
@@ -10622,33 +10874,33 @@ postponing for 1.6.
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGameSeries">VideoGameSeries</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
  </div>
-  <div typeof="rdf:Property" resource="http://schema.org/quest">
+  <!--div typeof="rdf:Property" resource="http://schema.org/quest">
       <span class="h" property="rdfs:label">quest</span>
       <span property="rdfs:comment">The task that a player-controlled character, or group of characters may complete in order to gain a reward.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Game">Game</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGameSeries">VideoGameSeries</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
- </div>
-   <div typeof="rdf:Property" resource="http://schema.org/gameItem">
+ </div-->
+   <!--div typeof="rdf:Property" resource="http://schema.org/gameItem">
       <span class="h" property="rdfs:label">gameItem</span>
       <span property="rdfs:comment">An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Game">Game</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGameSeries">VideoGameSeries</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
- </div>
+ </div-->
     <div typeof="rdf:Property" resource="http://schema.org/character">
       <span class="h" property="rdfs:label">character</span>
       <span property="rdfs:comment">Fictional person connected with a creative work.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
  </div>
-    <div typeof="rdf:Property" resource="http://schema.org/characterAttribute">
+    <!--div typeof="rdf:Property" resource="http://schema.org/characterAttribute">
       <span class="h" property="rdfs:label">characterAttribute</span>
       <span property="rdfs:comment">A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Game">Game</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGameSeries">VideoGameSeries</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
- </div>
+ </div-->
 
   <div typeof="rdf:Property" resource="http://schema.org/playMode">
       <span class="h" property="rdfs:label">playMode</span>
@@ -10689,7 +10941,7 @@ postponing for 1.6.
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGame">VideoGame</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
  </div>
-  <div typeof="rdf:Property" resource="http://schema.org/gamePlatform">
+  <!--div typeof="rdf:Property" resource="http://schema.org/gamePlatform">
       <span class="h" property="rdfs:label">gamePlatform</span>
       <span property="rdfs:comment">The electronic systems used to play &lt;a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms"&gt;video games&lt;/a&gt;.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGame">VideoGame</a></span>
@@ -10697,7 +10949,7 @@ postponing for 1.6.
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
        <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
- </div>
+ </div-->
         <div typeof="rdf:Property" resource="http://schema.org/serverStatus">
       <span class="h" property="rdfs:label">serverStatus</span>
       <span property="rdfs:comment">Status of a game server.</span>
@@ -11854,48 +12106,6 @@ postponing for 1.6.
       <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group">GAO</a></span>
     </div>  
 
-<!-- Property-Value Support as per https://www.w3.org/wiki/WebSchemas/PropertyValuePairs -->  
-<h1>Property-Value Support</h1>
-<div typeof="rdfs:Class" resource="http://schema.org/PropertyValue">
-    <span class="h" property="rdfs:label">PropertyValue</span>
-    <span property="rdfs:comment">A property-value pair, e.g. representing a feature of a product or place. Use the &apos;name&apos; property for the name of the property. If there is an additional human-readable version of the value, put that into the &apos;description&apos; property</span>
-    <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/StructuredValue">StructuredValue</a></span>
-    <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass">GoodRelationsClass</a></span>
-</div>
-<div typeof="rdf:Property" resource="http://schema.org/additionalProperty">
-    <span class="h" property="rdfs:label">additionalProperty</span>
-    <span property="rdfs:comment">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. &lt;br /&gt;&lt;br /&gt;
-
-Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
-</span>
-    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Product">Product</a></span>
-    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
-    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QualitativeValue">QualitativeValue</a></span>
-    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
-    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
-</div>
-<div typeof="rdf:Property" resource="http://schema.org/unitText">
-    <span class="h" property="rdfs:label">unitText</span>
-    <span property="rdfs:comment">A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
-&lt;a href=&#39;unitCode&#39;&gt;unitCode&lt;/a&gt;.</span>
-    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
-    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
-    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/TypeAndQuantityNode">TypeAndQuantityNode</a></span>
-    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/UnitPriceSpecification">UnitPriceSpecification</a></span>      
-    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-</div>
-<div typeof="rdf:Property" resource="http://schema.org/propertyID">
-    <span class="h" property="rdfs:label">propertyID</span>
-    <span property="rdfs:comment">A commonly used identifier for the characteristic represented by the property, e.g. a manufacturer or a standard code for a property. propertyID can be
-(1) a prefixed string, mainly meant to be used with standards for product properties; (2) a site-specific, non-prefixed string (e.g. the primary key of the property or the vendor-specific id of the property), or (3)
-a URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry). 
-Standards bodies should promote a standard prefix for the identifiers of properties from their standards.</span>
-    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PropertyValue">PropertyValue</a></span>
-    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
-</div>
-<!-- property name goes in schema:name -->
-<!-- unstructured textual properties or human-readable version should go in schema:description -->
 </body>
 
 </html>

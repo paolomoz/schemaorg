@@ -15,9 +15,9 @@
         <div id="intro">
             <div id="pageHeader">
                 <div class="wrapper">
-                    <h1>schema.org</h1>
+                    <h1>Digital Marketing Framework</h1>
 
-                    <div id="cse-search-form" style="width: 400px;"></div>
+                    <!--div id="cse-search-form" style="width: 400px;"></div-->
 
                     <script type="text/javascript" src="//www.google.com/jsapi"></script>
                     <script type="text/javascript">
@@ -40,10 +40,10 @@
     <div id="selectionbar">
         <div class="wrapper">
             <ul>
-                <li >
-                    <a href="../docs/documents.html">Documentation</a></li>
+                <!--li >
+                    <a href="../docs/documents.html">Documentation</a></li-->
                     <li class="activelink">
-                        <a href="../docs/schemas.html">Schemas</a></li>
+                        <a href="../docs/full.html">Schemas</a></li>
                         <li >
                             <a href="../.">Home</a></li>
                         </ul>
